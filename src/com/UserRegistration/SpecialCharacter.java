@@ -2,7 +2,7 @@ package com.UserRegistration;
 
 import java.util.Scanner;
 
-public class NumberInPassword {
+public class SpecialCharacter {
 
 	public static void main(String[] args) {
 
@@ -11,7 +11,7 @@ public class NumberInPassword {
 		 * -----------------------------------------------------------
 		 * 1.Taking user input 
 		 * 2.calling method to print true false 
-		 * 3.created method to Validate atleast 1 numeric number
+		 * 3.created method to Validate exactly 1 special character
 		 * -----------------------------------------------------------
 		 */
 
@@ -28,8 +28,8 @@ public class NumberInPassword {
 
 	}
 
-	// 3.created method to validate atleast 1 numeric number
+	// 3.created method to validate atleast 1 special character
 	public static boolean password(String pwd) {
-		return pwd.matches("^(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*[a-z]+).{8}$");
+		return pwd.matches("^(?=.*[A-Z]+)(?=.*[!@#$&*])(?=.*[0-9]+)(?=.*[a-z]+).{8}$");
 	}
 }
